@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics & Analytics - Tranquiex</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/statistics.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">
+            <div class="logo-3d">Tranquiex</div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="progress.html">Progress</a>
+            <a href="statistics.html" class="active">Statistics</a>
+            <a href="products.html">Products</a>
+            <a href="timer.html">Timer</a>
+            <a href="goals.html">Goals</a>
+            <a href="self.html" class="active">Self</a>
+            <a href="buy_tranquiex.html">Buy</a>
+        </div>
+        <button class="cta-button">Join Now</button>
+    </nav>
+
+    <!-- Statistics Dashboard -->
+    <div class="stats-container">
+        <!-- Time Distribution -->
+        <section class="stats-card time-spent">
+            <h2>Time Distribution</h2>
+            <div class="chart-container">
+                <canvas id="timeDistributionChart"></canvas>
+            </div>
+            <div class="chart-legend">
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #00ff9d"></span>
+                    <span>Deep Focus</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #4d7fff"></span>
+                    <span>Light Work</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #ff4d4d"></span>
+                    <span>Breaks</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productivity Score Trend -->
+        <section class="stats-card productivity-trend">
+            <h2>Productivity Score Trend</h2>
+            <div class="chart-container">
+                <div id="productivityTrendChart"></div>
+            </div>
+            <div class="trend-summary">
+                <div class="trend-stat positive">
+                    <span class="trend-value">+15%</span>
+                    <span class="trend-label">vs Last Week</span>
+                </div>
+                <div class="trend-stat">
+                    <span class="trend-value">85</span>
+                    <span class="trend-label">Current Score</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weekly vs Monthly Stats -->
+        <section class="stats-card comparison">
+            <h2>Performance Comparison</h2>
+            <div class="comparison-tabs">
+                <button class="tab-btn active" data-period="weekly">Weekly</button>
+                <button class="tab-btn" data-period="monthly">Monthly</button>
+            </div>
+            <div class="chart-container">
+                <canvas id="comparisonChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Focus Hours Heatmap -->
+        <section class="stats-card heatmap">
+            <h2>Daily Focus Hours</h2>
+            <div id="focusHeatmap"></div>
+            <div class="heatmap-legend">
+                <span class="legend-label">Less</span>
+                <div class="legend-gradient"></div>
+                <span class="legend-label">More</span>
+            </div>
+        </section>
+
+        <!-- AI Suggestions -->
+        <section class="stats-card ai-suggestions">
+            <h2>AI Insights</h2>
+            <div class="suggestion-container">
+                <div class="suggestion-icon">🎯</div>
+                <div class="suggestion-content">
+                    <h3>Today's Performance</h3>
+                    <p>You performed 80% better than your average. Keep up the momentum!</p>
+                </div>
+            </div>
+            <div class="suggestion-container">
+                <div class="suggestion-icon">⚡</div>
+                <div class="suggestion-content">
+                    <h3>Peak Hours</h3>
+                    <p>Your most productive hours are between 9 AM and 11 AM. Schedule important tasks during this time.</p>
+                </div>
+            </div>
+            <div class="suggestion-container">
+                <div class="suggestion-icon">📈</div>
+                <div class="suggestion-content">
+                    <h3>Growth Opportunity</h3>
+                    <p>Try increasing your afternoon focus sessions to match your morning performance.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/statistics.js"></script>
+</body>
+</html>

@@ -1,0 +1,419 @@
+/* Goals Page Styles */
+.goals-container {
+    padding: 100px 30px 50px;
+    min-height: 100vh;
+    background: var(--gradient-dark);
+}
+
+/* Goals Section */
+.goals-section {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.goals-section h2 {
+    color: var(--accent-color);
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Goal Cards */
+.goal-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.goal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.goal-progress {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.progress-ring-circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 8;
+}
+
+.progress-ring-circle {
+    fill: none;
+    stroke: var(--accent-color);
+    stroke-width: 8;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.goal-card h3 {
+    color: var(--text-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.goal-card p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+.goal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goal-streak {
+    color: #ff6b6b;
+    font-size: 14px;
+}
+
+.goal-streak i {
+    margin-right: 5px;
+}
+
+.update-btn {
+    padding: 8px 20px;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.update-btn:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Add Goal Card */
+.add-goal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    background: transparent;
+}
+
+.add-goal:hover {
+    border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.add-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 255, 157, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.add-icon i {
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+.add-goal:hover .add-icon {
+    transform: rotate(90deg);
+    background: var(--accent-color);
+}
+
+.add-goal:hover .add-icon i {
+    color: var(--primary-color);
+}
+
+/* Achievements Section */
+.achievements-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievements-section h2 {
+    color: var(--accent-color);
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Achievement Cards */
+.achievement-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateX(10px);
+}
+
+.achievement-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 255, 157, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-icon i {
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+.achievement-content {
+    flex: 1;
+}
+
+.achievement-content h3 {
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.achievement-content p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.achievement-date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.achievement-badge {
+    color: #ffd700;
+    font-size: 24px;
+}
+
+/* Locked Achievement */
+.achievement-card.locked {
+    opacity: 0.7;
+}
+
+.achievement-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-content h2 {
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+.reminder-options {
+    display: grid;
+    gap: 10px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.cancel-btn,
+.create-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+}
+
+.create-btn {
+    background: var(--accent-color);
+    border: none;
+    color: var(--primary-color);
+}
+
+.cancel-btn:hover {
+    border-color: var(--accent-color);
+}
+
+.create-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.3);
+}
+
+/* Celebration Overlay */
+.celebration-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.celebration-content {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.celebration-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.celebration-content h2 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.celebration-content p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+.share-btn {
+    padding: 12px 30px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .goals-container {
+        padding: 80px 20px 30px;
+    }
+
+    .goals-grid,
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 30px;
+    }
+}

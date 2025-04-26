@@ -1,0 +1,312 @@
+/* Progress Dashboard Styles */
+.dashboard-container {
+    padding: 100px 30px 50px;
+    min-height: 100vh;
+    background: var(--gradient-dark);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Progress Card */
+.progress-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-card h2 {
+    color: var(--accent-color);
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.circular-progress {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.percentage {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--accent-color);
+    display: block;
+}
+
+.label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--accent-color);
+    display: block;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Timeline Section */
+.timeline-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-section h2 {
+    color: var(--accent-color);
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: rgba(0, 255, 157, 0.3);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 20px 0;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.5s forwards;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 28px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    border: 2px solid var(--primary-color);
+}
+
+.timeline-item.completed::before {
+    background: var(--accent-color);
+}
+
+.timeline-item.active::before {
+    animation: pulse 2s infinite;
+}
+
+.time {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 5px;
+}
+
+.content h3 {
+    color: var(--text-color);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.content p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.check-mark {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-color);
+    font-size: 20px;
+}
+
+/* Focus Session Logs */
+.session-logs {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.session-logs h2 {
+    color: var(--accent-color);
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.log-item {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.log-item:hover {
+    transform: translateX(10px);
+}
+
+.log-item.success {
+    border-left: 4px solid var(--accent-color);
+}
+
+.log-item.failed {
+    border-left: 4px solid #ff4d4d;
+}
+
+.log-time {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    min-width: 120px;
+}
+
+.log-details h3 {
+    color: var(--text-color);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.log-details p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.log-status {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.success .log-status {
+    background: rgba(0, 255, 157, 0.1);
+    color: var(--accent-color);
+}
+
+.failed .log-status {
+    background: rgba(255, 77, 77, 0.1);
+    color: #ff4d4d;
+}
+
+/* Milestone Section */
+.milestone-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.milestone-content h2 {
+    color: var(--accent-color);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.milestone-content p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+.share-btn {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.3);
+}
+
+/* Animations */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 157, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 255, 157, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 157, 0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+        padding: 80px 20px 30px;
+    }
+
+    .circular-progress {
+        width: 150px;
+        height: 150px;
+    }
+
+    .percentage {
+        font-size: 28px;
+    }
+
+    .timeline-section, .session-logs {
+        margin-top: 20px;
+    }
+}

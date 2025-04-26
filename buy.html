@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Rakshak AI - Your Personal Safety Companion</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/buy.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">
+            <div class="logo-3d">Tranquiex</div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="progress.html">Progress</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="products.html">Products</a>
+            <a href="timer.html">Timer</a>
+            <a href="goals.html">Goals</a>
+            <a href="self.html">Self</a>
+            <a href="buy.html" class="active">Buy</a>
+        </div>
+        <button class="cta-button">Join Now</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Rakshak AI — Your Personal Safety Companion</h1>
+            <p class="hero-subtitle">Smart. Reliable. Built with love in India 🇮🇳</p>
+        </div>
+        <div id="wearable-3d" class="wearable-container"></div>
+    </section>
+
+    <!-- Product Overview Cards -->
+    <section class="features-section">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-microphone-alt"></i>
+                </div>
+                <h3>Real-time Voice Recognition</h3>
+                <p>Advanced AI-powered voice recognition system that works instantly to detect emergency situations.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h3>Emergency SOS Trigger</h3>
+                <p>Instant SOS activation through voice commands or manual triggers, connecting you to help immediately.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Multi-device Connection</h3>
+                <p>Seamlessly connect and sync across multiple devices for comprehensive safety coverage.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Offline Emergency Backup</h3>
+                <p>Continues to protect you even without internet connectivity, ensuring 24/7 safety.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Highlights -->
+    <section class="tech-section">
+        <h2>🔧 Under the Hood</h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">WebSockets</span>
+                <p>Robust backend infrastructure for real-time communication</p>
+            </div>
+            <div class="tech-card">
+                <span class="tech-badge">NLP</span>
+                <span class="tech-badge">Voice AI</span>
+                <p>State-of-the-art natural language processing models</p>
+            </div>
+            <div class="tech-card">
+                <span class="tech-badge">P2P</span>
+                <span class="tech-badge">Signal Protocol</span>
+                <p>Secure device-to-device communication</p>
+            </div>
+            <div class="tech-card">
+                <span class="tech-badge">Edge TTS</span>
+                <span class="tech-badge">Custom Dataset</span>
+                <p>Optimized for Indian languages and accents</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Datasets Section -->
+    <section class="datasets-section">
+        <h2>Trained on World-Class Datasets</h2>
+        <div class="dataset-scroll">
+            <div class="dataset-card">
+                <h3>SQuAD</h3>
+                <p>Stanford Question Answering Dataset for precise context understanding</p>
+            </div>
+            <div class="dataset-card">
+                <h3>CoQA</h3>
+                <p>Conversational Question Answering for natural dialogue flow</p>
+            </div>
+            <div class="dataset-card">
+                <h3>TriviaQA</h3>
+                <p>Complex question-answer pairs for enhanced comprehension</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section">
+        <h2>See Rakshak in Action</h2>
+        <div class="demo-container">
+            <div class="demo-placeholder">
+                <i class="fas fa-play-circle"></i>
+                <p>Watch Demo Video</p>
+            </div>
+            <button class="watch-demo-btn">Watch Full Demo</button>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <h2>🚀 Get Rakshak Now</h2>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Individual License</h3>
+                <div class="price">₹999<span>/year</span></div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Single device support</li>
+                    <li><i class="fas fa-check"></i> 24/7 emergency access</li>
+                    <li><i class="fas fa-check"></i> Basic voice commands</li>
+                </ul>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="pricing-card featured">
+                <div class="featured-tag">Most Popular</div>
+                <h3>Institution License</h3>
+                <div class="price">Custom</div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Multi-device support</li>
+                    <li><i class="fas fa-check"></i> Central dashboard</li>
+                    <li><i class="fas fa-check"></i> Advanced analytics</li>
+                    <li><i class="fas fa-check"></i> Custom integration</li>
+                </ul>
+                <button class="buy-now-btn">Request Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is Rakshak available offline?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, Rakshak has a robust offline mode that continues to provide essential safety features even without internet connectivity. Core voice recognition and emergency triggers work seamlessly offline.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can Rakshak work on any device?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Rakshak is compatible with most modern smartphones and tablets running Android 8.0+ or iOS 12+. We also provide specialized hardware solutions for institutional deployments.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How is Rakshak different from Google Assistant?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Unlike general-purpose assistants, Rakshak is specifically designed for safety with specialized emergency detection, offline capabilities, and integration with local emergency services. It's optimized for Indian languages and emergency scenarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>Still have questions? Let's talk.</h2>
+        <div class="contact-buttons">
+            <a href="mailto:support@rakshak.ai" class="contact-btn email-btn">
+                <i class="fas fa-envelope"></i> Email Us
+            </a>
+            <a href="https://wa.me/1234567890" class="contact-btn whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <script src="js/buy.js"></script>
+</body>
+</html>

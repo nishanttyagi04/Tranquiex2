@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer & Focus Mode - Tranquiex</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/timer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">
+            <div class="logo-3d">Tranquiex</div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="progress.html">Progress</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="products.html">Products</a>
+            <a href="timer.html" class="active">Timer</a>
+            <a href="goals.html">Goals</a>
+            <a href="self.html">Self</a>
+            <a href="buy_tranquiex.html">Buy</a>
+        </div>
+        <button class="cta-button">Join Now</button>
+    </nav>
+
+    <!-- Timer Container -->
+    <div class="timer-container">
+        <!-- Main Timer Section -->
+        <section class="timer-section">
+            <div class="timer-display">
+                <div class="time-wheel">
+                    <div class="time-circle">
+                        <svg class="progress-ring" width="400" height="400">
+                            <circle class="progress-ring-circle-bg" cx="200" cy="200" r="190" />
+                            <circle class="progress-ring-circle" cx="200" cy="200" r="190" />
+                        </svg>
+                        <div class="time-display">
+                            <span class="hours">00</span>
+                            <span class="colon">:</span>
+                            <span class="minutes">25</span>
+                            <span class="colon">:</span>
+                            <span class="seconds">00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timer-controls">
+                    <button class="control-btn decrease"><i class="fas fa-minus"></i></button>
+                    <button class="control-btn start-btn">Start Focus</button>
+                    <button class="control-btn increase"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Selection -->
+        <section class="music-section">
+            <h2>Ambient Soundscapes</h2>
+            <div class="music-grid">
+                <div class="music-card">
+                    <div class="music-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Ocean Waves</h3>
+                    <div class="music-controls">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                        <input type="range" class="volume-slider" min="0" max="100" value="50">
+                    </div>
+                </div>
+                <div class="music-card">
+                    <div class="music-icon">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <h3>Rain Sounds</h3>
+                    <div class="music-controls">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                        <input type="range" class="volume-slider" min="0" max="100" value="50">
+                    </div>
+                </div>
+                <div class="music-card">
+                    <div class="music-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>White Noise</h3>
+                    <div class="music-controls">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                        <input type="range" class="volume-slider" min="0" max="100" value="50">
+                    </div>
+                </div>
+                <div class="music-card">
+                    <div class="music-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Fireplace</h3>
+                    <div class="music-controls">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                        <input type="range" class="volume-slider" min="0" max="100" value="50">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+                <!-- Preset URLs Section -->
+                <section class="preset-urls-section">
+                    <h2>Focus Websites</h2>
+                    <p>Add websites you want to access during your focus session</p>
+        
+                    <div class="url-input-container">
+                        <input type="text" id="urlInput" placeholder="Enter website URL (e.g., https://www.example.com)">
+                        <button id="addUrlBtn"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+        
+                    <div class="url-list-container">
+                        <h3>My URLs</h3>
+                        <ul id="urlList" class="url-list">
+                            <!-- URLs will be added here dynamically -->
+                        </ul>
+                        <div class="empty-state" id="emptyUrlState">
+                            <i class="fas fa-link"></i>
+                            <p>No URLs added yet. Add your first URL above!</p>
+                        </div>
+                    </div>
+        
+                    <div class="url-groups-container">
+                        <div class="url-group-header">
+                            <h3>URL Groups</h3>
+                            <button id="createGroupBtn"><i class="fas fa-folder-plus"></i> Create Group</button>
+                        </div>
+        
+                        <div id="urlGroups" class="url-groups">
+                            <!-- URL groups will be added here dynamically -->
+                        </div>
+                        <div class="empty-state" id="emptyGroupState">
+                            <i class="fas fa-folder"></i>
+                            <p>No URL groups yet. Create your first group!</p>
+                        </div>
+                    </div>
+                </section>
+        <!-- Focus Settings -->
+        <section class="focus-settings">
+            <h2>Focus Settings</h2>
+            <div class="settings-grid">
+                <div class="setting-card">
+                    <div class="setting-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="setting-content">
+                        <h3>Screen Monitoring</h3>
+                        <p>Track active applications</p>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-card">
+                    <div class="setting-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="setting-content">
+                        <h3>Smart Band Alerts</h3>
+                        <p>Vibrate on distractions</p>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-card">
+                    <div class="setting-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="setting-content">
+                        <h3>Live Statistics</h3>
+                        <p>Real-time focus metrics</p>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-card">
+                    <div class="setting-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="setting-content">
+                        <h3>Screen Lock</h3>
+                        <p>Lock on inactivity</p>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Failure Animation Container -->
+        <div class="failure-overlay" style="display: none;">
+            <div class="failure-content">
+                <i class="fas fa-exclamation-circle"></i>
+                <h2>Focus Lost!</h2>
+                <p>You left the focus zone</p>
+                <button class="resume-btn">Resume Session</button>
+            </div>
+        </div>
+
+        <!-- Live Stats -->
+        <section class="live-stats">
+            <h2>Session Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Focus Breaks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">00:00</div>
+                    <div class="stat-label">Time Focused</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Focus Score</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/timer.js"></script>
+</body>
+</html>

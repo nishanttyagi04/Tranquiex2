@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tranquiex - Smart Productivity System</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/buy.css">
+    <link rel="stylesheet" href="styles/workflow.css">
+    <link rel="stylesheet" href="styles/hardware.css">
+    <link rel="stylesheet" href="styles/testimonials.css">
+    <link rel="stylesheet" href="styles/wearable3d.css">
+    <link rel="stylesheet" href="styles/hero-new.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">
+            <div class="logo-3d">Tranquiex</div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="progress.html">Progress</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="products.html">Products</a>
+            <a href="timer.html">Timer</a>
+            <a href="goals.html">Goals</a>
+            <a href="self.html">Self</a>
+            <a href="buy_tranquiex.html" class="active">Buy</a>
+        </div>
+        <button class="cta-button">Join Now</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span>🚀</span>
+                <span class="accent">Tranquiex</span>
+                Smart Productivity System
+            </h1>
+            <p class="hero-subtitle">Designed to keep you focused, alert, and unstoppable.</p>
+            <button class="cta-button">Get Started Now</button>
+        </div>
+    </section>
+
+    <!-- Feature Cards -->
+    <section class="features-section">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Focus Tracker</h3>
+                <p>Real-time camera-based detection to track if the user is present.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Smart Timer</h3>
+                <p>Deep work timer with alerts and music integration.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-wave-square"></i>
+                </div>
+                <h3>Vibration Alerts</h3>
+                <p>Smart wristband sends gentle vibrations if user moves away.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Parental Unlock System</h3>
+                <p>Unlock restrictions only via Authenticator Code.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <h3>Offline Alert System</h3>
+                <p>Band keeps vibrating even if offline, until reauthentication.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Focus History Reports</h3>
+                <p>Users can view sessions, fail/success records, and habits.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="workflow-section">
+        <h2>How Tranquiex Works</h2>
+        <div class="workflow-timeline">
+            <div class="workflow-step">
+                <div class="step-number">1</div>
+                <h3>Start Focus Session</h3>
+                <p>User initiates a new focus session</p>
+            </div>
+            <div class="workflow-step">
+                <div class="step-number">2</div>
+                <h3>System Activation</h3>
+                <p>Timer + camera + music activated</p>
+            </div>
+            <div class="workflow-step">
+                <div class="step-number">3</div>
+                <h3>Wristband Connection</h3>
+                <p>Connected via Bluetooth/WiFi</p>
+            </div>
+            <div class="workflow-step">
+                <div class="step-number">4</div>
+                <h3>Movement Detection</h3>
+                <p>Triggers vibration alert if moved</p>
+            </div>
+            <div class="workflow-step">
+                <div class="step-number">5</div>
+                <h3>Session Management</h3>
+                <p>Continues or fails based on return</p>
+            </div>
+            <div class="workflow-step">
+                <div class="step-number">6</div>
+                <h3>Parent Notification</h3>
+                <p>Alerts via code system if needed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Section -->
+    <section class="hardware-section">
+        <h2>Smart Wearable Device</h2>
+        <div class="hardware-container">
+            <div class="hardware-image">
+                <!-- 3D model will be rendered here -->
+            </div>
+            <div class="hardware-specs">
+                <div class="spec-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Vibration Motor</h3>
+                    <p>Precise haptic feedback system</p>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Haptic Controller</h3>
+                    <p>Advanced vibration patterns</p>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-wifi"></i>
+                    <h3>WiFi Module (ESP32)</h3>
+                    <p>Reliable wireless connectivity</p>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-battery-full"></i>
+                    <h3>Rechargeable Battery</h3>
+                    <p>Long-lasting power source</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <h2>Choose Your Plan</h2>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Prototype Edition</h3>
+                <div class="price">₹4,999</div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Basic wristband</li>
+                    <li><i class="fas fa-check"></i> Core features</li>
+                    <li><i class="fas fa-check"></i> 3 months support</li>
+                </ul>
+                <div class="price-badges">
+                    <span><i class="fas fa-lock"></i> Secure Purchase</span>
+                    <span><i class="fas fa-undo"></i> 7-day return</span>
+                </div>
+                <button class="pre-order-btn">Pre-Order Now</button>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="featured-tag">Most Popular</div>
+                <h3>Student Pack</h3>
+                <div class="price">₹6,999</div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Premium wristband</li>
+                    <li><i class="fas fa-check"></i> All features</li>
+                    <li><i class="fas fa-check"></i> 1 year support</li>
+                    <li><i class="fas fa-check"></i> Parent dashboard</li>
+                </ul>
+                <div class="price-badges">
+                    <span><i class="fas fa-lock"></i> Secure Purchase</span>
+                    <span><i class="fas fa-undo"></i> 7-day return</span>
+                    <span><i class="fas fa-graduation-cap"></i> Student discount</span>
+                </div>
+                <button class="pre-order-btn">Pre-Order Now</button>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Institution License</h3>
+                <div class="price">Custom</div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Bulk wristbands</li>
+                    <li><i class="fas fa-check"></i> Admin dashboard</li>
+                    <li><i class="fas fa-check"></i> Custom integration</li>
+                    <li><i class="fas fa-check"></i> Priority support</li>
+                </ul>
+                <button class="request-demo-btn">Request Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I use Tranquiex without the wristband?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>While the core software works without the wristband, you'll miss out on the vibration alerts and offline protection features that make Tranquiex uniquely effective.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How does Tranquiex know I'm not in front of the screen?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Tranquiex uses advanced computer vision through your device's camera to detect presence and attention levels, ensuring you stay focused during study sessions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is it compatible with Mac and Windows?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, Tranquiex is fully compatible with both Mac and Windows systems. The wristband connects seamlessly via Bluetooth on both platforms.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can my parent disable a session remotely?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, parents can use their Authenticator Code to remotely manage sessions, including pausing or ending them when needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <h2>What Our Users Say</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card active">
+                <p class="quote">"Helped me double my study time!"</p>
+                <p class="author">— Student, IIT</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="quote">"My son now studies without distractions."</p>
+                <p class="author">— Parent</p>
+            </div>
+            <div class="testimonial-controls">
+                <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/buy_tranquiex_new.js"></script>
+    <script src="js/wearable3d.js"></script>
+</body>
+</html>

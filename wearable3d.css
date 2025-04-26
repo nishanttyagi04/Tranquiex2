@@ -1,0 +1,95 @@
+/* 3D Model Container Styles */
+
+.hardware-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 300px;
+    border: 1px solid rgba(0, 255, 157, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hardware-image:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 30px rgba(0, 255, 157, 0.2);
+}
+
+.hardware-image canvas {
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto !important;
+    cursor: grab;
+}
+
+.hardware-image canvas:active {
+    cursor: grabbing;
+}
+
+/* Loading State */
+.hardware-image::before {
+    content: 'Loading 3D Model...';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent-color);
+    font-size: 16px;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* Interaction Hint */
+.hardware-image::after {
+    content: 'Drag to rotate';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--accent-color);
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
+.hardware-image:hover::after {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hardware-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hardware-image {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hardware-image {
+        min-height: 200px;
+    }
+    
+    .hardware-image::before {
+        font-size: 14px;
+    }
+    
+    .hardware-image::after {
+        font-size: 12px;
+        bottom: 10px;
+    }
+}

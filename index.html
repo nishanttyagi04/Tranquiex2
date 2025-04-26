@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranquiex - Build Discipline, Beat Procrastination</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">
+            <div class="logo-3d">Tranquiex</div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="progress.html">Progress</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="products.html">Products</a>
+            <a href="timer.html">Timer</a>
+            <a href="goals.html">Goals</a>
+            <a href="self.html">Self</a>
+            <a href="buy_tranquiex.html">Buy</a>
+        </div>
+        <button class="cta-button" onclick="window.location.href='progress.html'">Join Now</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <div class="animated-text-container">
+                <h1 class="animated-text">
+                    <span>Build</span>
+                    <span>Discipline</span>
+                    <span>Achieve More</span>
+                </h1>
+            </div>
+            <div class="rotating-words">
+                <span>Focus</span>
+                <span>Growth</span>
+                <span>Success</span>
+                <span>Progress</span>
+            </div>
+            <button class="start-journey-btn" onclick="window.location.href='timer.html'">Start Your Journey</button>
+        </div>
+        <div id="scene-container"></div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Features Preview -->
+    <section class="features">
+        <div class="features-container">
+            <div class="feature-card" onclick="window.location.href='progress.html'">
+                <div class="feature-icon">🎯</div>
+                <h3>Progress Tracking</h3>
+                <p>Monitor your daily achievements</p>
+            </div>
+            <div class="feature-card" onclick="window.location.href='timer.html'">
+                <div class="feature-icon">📊</div>
+                <h3>Real-time Monitoring</h3>
+                <p>Stay focused with live tracking</p>
+            </div>
+            <div class="feature-card" onclick="window.location.href='products.html'">
+                <div class="feature-icon">⌚</div>
+                <h3>Vibration Band</h3>
+                <p>Smart notifications on your wrist</p>
+            </div>
+            <div class="feature-card" onclick="window.location.href='statistics.html'">
+                <div class="feature-icon">📈</div>
+                <h3>Statistics Dashboard</h3>
+                <p>Visualize your progress</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/three-scene.js"></script>
+</body>
+</html>

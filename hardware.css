@@ -1,0 +1,161 @@
+/* Hardware Section Styles */
+
+.hardware-section {
+    padding: 80px 50px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 255, 157, 0.05) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hardware-section h2 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 50px;
+    font-size: 36px;
+    position: relative;
+}
+
+.hardware-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Hardware Image Styles */
+.hardware-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-image {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 255, 157, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.placeholder-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(0, 255, 157, 0.2);
+    border-color: var(--accent-color);
+}
+
+.placeholder-image i {
+    font-size: 64px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.placeholder-image:hover i {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.placeholder-image span {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 16px;
+}
+
+/* Hardware Specs Styles */
+.hardware-specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.spec-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.spec-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.spec-item i {
+    font-size: 32px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.spec-item:hover i {
+    transform: scale(1.2);
+}
+
+.spec-item h3 {
+    color: var(--accent-color);
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.spec-item p {
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hardware-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hardware-specs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hardware-section {
+        padding: 60px 20px;
+    }
+
+    .placeholder-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hardware-specs {
+        grid-template-columns: 1fr;
+    }
+
+    .spec-item {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hardware-section h2 {
+        font-size: 28px;
+    }
+
+    .placeholder-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .placeholder-image i {
+        font-size: 48px;
+    }
+}

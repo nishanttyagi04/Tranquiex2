@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Yourself - Tranquiex</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/self.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">
+            <div class="logo-3d">Tranquiex</div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="progress.html">Progress</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="products.html">Products</a>
+            <a href="timer.html">Timer</a>
+            <a href="goals.html">Goals</a>
+            <a href="self.html" class="active">Self</a>
+            <a href="buy_tranquiex.html">Buy</a>
+        </div>
+        <button class="cta-button">Join Now</button>
+    </nav>
+
+    <!-- Self Discovery Container -->
+    <div class="self-container">
+        <section class="self-header">
+            <h1>Discover Yourself</h1>
+            <p class="subtitle">Evaluate your hidden talents by answering a few quick questions</p>
+        </section>
+
+        <section class="questionnaire-section">
+            <form id="selfAssessmentForm">
+                <div class="question-card">
+                    <h3>1. How do you prefer to solve problems?</h3>
+                    <div class="options-container">
+                        <label class="radio-option">
+                            <input type="radio" name="problem_solving" value="analytical">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Breaking them down systematically</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="problem_solving" value="creative">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Finding innovative solutions</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="problem_solving" value="intuitive">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Following my intuition</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>2. When learning something new, you prefer:</h3>
+                    <div class="options-container">
+                        <label class="radio-option">
+                            <input type="radio" name="learning_style" value="visual">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Visual demonstrations and diagrams</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="learning_style" value="practical">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Hands-on practice</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="learning_style" value="theoretical">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Reading and theoretical understanding</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>3. In a group project, you naturally take the role of:</h3>
+                    <div class="options-container">
+                        <label class="radio-option">
+                            <input type="radio" name="group_role" value="leader">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">The leader who organizes everything</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="group_role" value="creative">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">The idea generator</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="group_role" value="supporter">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">The supportive team player</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>4. How do you prefer to express yourself?</h3>
+                    <div class="options-container">
+                        <label class="radio-option">
+                            <input type="radio" name="expression" value="verbal">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Through words and speaking</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="expression" value="written">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Through writing</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="expression" value="visual">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Through visual arts or design</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>5. What energizes you the most?</h3>
+                    <div class="options-container">
+                        <label class="radio-option">
+                            <input type="radio" name="energy_source" value="social">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Interacting with others</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="energy_source" value="solo">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Working independently</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="energy_source" value="mixed">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">A mix of both</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>6. When faced with a challenge, you typically:</h3>
+                    <div class="options-container">
+                        <label class="radio-option">
+                            <input type="radio" name="challenge_approach" value="plan">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Plan everything in detail</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="challenge_approach" value="adapt">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Adapt as you go</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="challenge_approach" value="collaborate">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Seek help from others</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="evaluate-btn">Evaluate Me</button>
+            </form>
+        </section>
+
+        <!-- Result Section (Hidden by default) -->
+        <section class="result-section" style="display: none;">
+            <div class="result-card">
+                <div class="result-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h2 class="result-title">Your Dominant Traits</h2>
+                <div class="trait-container">
+                    <div class="primary-trait">
+                        <h3>Primary Strength</h3>
+                        <p class="trait-text">Creative Problem Solver</p>
+                    </div>
+                    <div class="secondary-traits">
+                        <h3>Supporting Traits</h3>
+                        <ul class="traits-list">
+                            <li>Visual Learning</li>
+                            <li>Independent Worker</li>
+                            <li>Adaptive Thinking</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="suggestion-box">
+                    <h3>Suggested Focus Areas</h3>
+                    <p class="suggestion-text">Consider exploring fields that combine creativity with systematic thinking, such as UX Design, Architecture, or Strategic Planning.</p>
+                </div>
+                <button class="retake-btn">Retake Assessment</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/self.js"></script>
+</body>
+</html>

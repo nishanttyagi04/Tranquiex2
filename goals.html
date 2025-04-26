@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals & Achievements - Tranquiex</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/goals.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">
+            <div class="logo-3d">Tranquiex</div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="progress.html">Progress</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="products.html">Products</a>
+            <a href="timer.html">Timer</a>
+            <a href="goals.html" class="active">Goals</a>
+            <a href="self.html">Self</a>
+            <a href="buy_tranquiex.html">Buy</a>
+        </div>
+        <button class="cta-button">Join Now</button>
+    </nav>
+
+    <!-- Goals Container -->
+    <div class="goals-container">
+        <!-- Current Goals -->
+        <section class="goals-section">
+            <h2>Active Goals</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-progress">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle-bg" cx="60" cy="60" r="54"/>
+                            <circle class="progress-ring-circle" cx="60" cy="60" r="54" data-progress="75"/>
+                        </svg>
+                        <span class="progress-text">75%</span>
+                    </div>
+                    <h3>Daily Focus Time</h3>
+                    <p>4 hours / 6 hours</p>
+                    <div class="goal-footer">
+                        <span class="goal-streak"><i class="fas fa-fire"></i> 5 days</span>
+                        <button class="update-btn">Update</button>
+                    </div>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-progress">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle-bg" cx="60" cy="60" r="54"/>
+                            <circle class="progress-ring-circle" cx="60" cy="60" r="54" data-progress="40"/>
+                        </svg>
+                        <span class="progress-text">40%</span>
+                    </div>
+                    <h3>Weekly Tasks</h3>
+                    <p>8 tasks / 20 tasks</p>
+                    <div class="goal-footer">
+                        <span class="goal-streak"><i class="fas fa-fire"></i> 3 weeks</span>
+                        <button class="update-btn">Update</button>
+                    </div>
+                </div>
+
+                <div class="goal-card add-goal">
+                    <div class="add-icon">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <h3>Add New Goal</h3>
+                    <p>Set a new target</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section class="achievements-section">
+            <h2>Recent Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card unlocked">
+                    <div class="achievement-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>Time Master</h3>
+                        <p>Completed 10 focus sessions</p>
+                        <div class="achievement-date">Unlocked: Today</div>
+                    </div>
+                    <div class="achievement-badge">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                </div>
+
+                <div class="achievement-card unlocked">
+                    <div class="achievement-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>Productivity Streak</h3>
+                        <p>5 days consecutive focus</p>
+                        <div class="achievement-date">Unlocked: Yesterday</div>
+                    </div>
+                    <div class="achievement-badge">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                </div>
+
+                <div class="achievement-card locked">
+                    <div class="achievement-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>Focus Champion</h3>
+                        <p>Complete 50 focus sessions</p>
+                        <div class="achievement-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%"></div>
+                            </div>
+                            <span>30/50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Goal Creation Modal -->
+        <div class="modal" id="goalModal">
+            <div class="modal-content">
+                <h2>Create New Goal</h2>
+                <form id="goalForm">
+                    <div class="form-group">
+                        <label for="goalType">Goal Type</label>
+                        <select id="goalType" required>
+                            <option value="focus">Focus Time</option>
+                            <option value="tasks">Tasks Completion</option>
+                            <option value="streak">Streak Goal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="goalTarget">Target Value</label>
+                        <input type="number" id="goalTarget" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="goalPeriod">Time Period</label>
+                        <select id="goalPeriod" required>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="goalReminder">Reminders</label>
+                        <div class="reminder-options">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span>Push Notifications</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span>Smart Band Alerts</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="create-btn">Create Goal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Milestone Celebration -->
+        <div class="celebration-overlay" style="display: none;">
+            <div class="celebration-content">
+                <div class="celebration-icon">🎉</div>
+                <h2>Achievement Unlocked!</h2>
+                <p>Congratulations! You've reached a new milestone.</p>
+                <button class="share-btn">Share Achievement</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/goals.js"></script>
+</body>
+</html>

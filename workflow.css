@@ -1,0 +1,150 @@
+/* How it Works Section Styles */
+
+.workflow-section {
+    padding: 80px 50px;
+    background: linear-gradient(135deg, rgba(0, 255, 157, 0.05) 0%, transparent 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.workflow-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    transform: translateY(-50%);
+    opacity: 0.2;
+}
+
+.workflow-section h2 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 50px;
+    font-size: 36px;
+    position: relative;
+}
+
+.workflow-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.workflow-step {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    backdrop-filter: blur(10px);
+}
+
+.workflow-step:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(0, 255, 157, 0.1);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
+    transition: all 0.3s ease;
+}
+
+.workflow-step:hover .step-number {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 255, 157, 0.5);
+}
+
+.workflow-step h3 {
+    color: var(--accent-color);
+    margin: 15px 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.workflow-step p {
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Connect steps with lines */
+.workflow-step::before {
+    content: '';
+    position: absolute;
+    top: 45px;
+    right: -15px;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-color), transparent);
+    opacity: 0.3;
+}
+
+.workflow-step:last-child::before {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .workflow-timeline {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .workflow-timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .workflow-section {
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .workflow-timeline {
+        grid-template-columns: 1fr;
+    }
+    
+    .workflow-step {
+        padding: 20px;
+    }
+    
+    .workflow-step::before {
+        display: none;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .workflow-step h3 {
+        font-size: 20px;
+    }
+}

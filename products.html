@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Hardware - Tranquiex</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/products.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">
+            <div class="logo-3d">Tranquiex</div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="progress.html">Progress</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="timer.html">Timer</a>
+            <a href="goals.html">Goals</a>
+            <a href="self.html">Self</a>
+            <a href="buy_tranquiex.html">Buy</a>
+        </div>
+        <button class="cta-button">Join Now</button>
+    </nav>
+
+    <!-- Products Showcase -->
+    <div class="products-container">
+        <!-- Smart Band Section -->
+        <section class="product-showcase">
+            <div class="product-info">
+                <h1>Smart Band Pro</h1>
+                <p class="product-tagline">Your Personal Productivity Companion</p>
+                <div class="features-list">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Vibration Alerts</h3>
+                            <p>Gentle reminders to stay focused</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Real-time Monitoring</h3>
+                            <p>Track your productivity metrics</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-battery-full"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>7-Day Battery Life</h3>
+                            <p>Long-lasting performance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="order-btn">Pre-order Now</button>
+                    <span class="price">$99.99</span>
+                </div>
+            </div>
+            <div class="product-visual">
+                <div id="model-viewer"></div>
+                <div class="product-controls">
+                    <button class="control-btn" data-view="front">Front</button>
+                    <button class="control-btn" data-view="side">Side</button>
+                    <button class="control-btn" data-view="back">Back</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Authenticator Integration -->
+        <section class="auth-section">
+            <h2>Parent Authenticator Integration</h2>
+            <div class="auth-options">
+                <div class="auth-card">
+                    <div class="auth-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3>Microsoft Authenticator</h3>
+                    <p>Secure verification with Microsoft's trusted platform</p>
+                    <button class="connect-btn">Connect</button>
+                </div>
+                <div class="auth-card">
+                    <div class="auth-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3>Google Authenticator</h3>
+                    <p>Quick and reliable authentication with Google</p>
+                    <button class="connect-btn">Connect</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Form -->
+        <section class="order-section" id="orderForm">
+            <h2>Place Your Order</h2>
+            <form class="order-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <select id="color" required>
+                            <option value="black">Stealth Black</option>
+                            <option value="silver">Arctic Silver</option>
+                            <option value="gold">Rose Gold</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" min="1" value="1" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <textarea id="address" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Complete Order</button>
+            </form>
+        </section>
+
+        <!-- Coming Soon -->
+        <section class="coming-soon">
+            <h2>Coming Soon</h2>
+            <div class="product-teasers">
+                <div class="teaser-card">
+                    <div class="teaser-visual">
+                        <div class="rotating-box">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                    </div>
+                    <h3>Smart Display</h3>
+                    <p>Your productivity dashboard in physical form</p>
+                    <span class="eta">Expected: Q4 2024</span>
+                </div>
+                <div class="teaser-card">
+                    <div class="teaser-visual">
+                        <div class="rotating-box">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                    </div>
+                    <h3>Focus Pods</h3>
+                    <p>Noise-cancelling earbuds with focus tracking</p>
+                    <span class="eta">Expected: Q1 2025</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/products.js"></script>
+</body>
+</html>

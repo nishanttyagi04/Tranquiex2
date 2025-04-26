@@ -1,0 +1,113 @@
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    overflow: hidden;
+    background: var(--primary-color);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 255, 157, 0.1) 100%
+    );
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.hero-title .accent {
+    color: var(--accent-color);
+    text-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-section .cta-button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 255, 157, 0.3);
+}
+
+.hero-section .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 157, 0.4);
+}
+
+.hero-section .cta-button:active {
+    transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-section .cta-button {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-section .cta-button {
+        font-size: 1rem;
+        padding: 0.7rem 1.4rem;
+    }
+}

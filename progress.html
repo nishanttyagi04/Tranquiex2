@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Dashboard - Tranquiex</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/progress.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">
+            <div class="logo-3d">Tranquiex</div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="progress.html" class="active">Progress</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="products.html">Products</a>
+            <a href="timer.html">Timer</a>
+            <a href="goals.html">Goals</a>
+            <a href="self.html">Self</a>
+            <a href="buy_tranquiex.html">Buy</a>
+        </div>
+        <button class="cta-button">Join Now</button>
+    </nav>
+
+    <!-- Progress Dashboard -->
+    <div class="dashboard-container">
+        <!-- Daily Progress Card -->
+        <section class="progress-card">
+            <h2>Your Daily Progress</h2>
+            <div class="circular-progress">
+                <canvas id="progressChart"></canvas>
+                <div class="progress-text">
+                    <span class="percentage">75%</span>
+                    <span class="label">Daily Goal</span>
+                </div>
+            </div>
+            <div class="progress-stats">
+                <div class="stat-item">
+                    <span class="stat-value">4.5</span>
+                    <span class="stat-label">Hours Focused</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">8</span>
+                    <span class="stat-label">Tasks Completed</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Activity -->
+        <section class="timeline-section">
+            <h2>Today's Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item completed">
+                    <div class="time">09:00 AM</div>
+                    <div class="content">
+                        <h3>Morning Focus Session</h3>
+                        <p>Completed 2 hours of deep work</p>
+                        <div class="check-mark">✓</div>
+                    </div>
+                </div>
+                <div class="timeline-item completed">
+                    <div class="time">11:30 AM</div>
+                    <div class="content">
+                        <h3>Project Planning</h3>
+                        <p>Outlined weekly goals</p>
+                        <div class="check-mark">✓</div>
+                    </div>
+                </div>
+                <div class="timeline-item active">
+                    <div class="time">02:00 PM</div>
+                    <div class="content">
+                        <h3>Afternoon Session</h3>
+                        <p>In progress...</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">04:30 PM</div>
+                    <div class="content">
+                        <h3>Review & Planning</h3>
+                        <p>Upcoming</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Focus Session Logs -->
+        <section class="session-logs">
+            <h2>Focus Session Logs</h2>
+            <div class="logs-container">
+                <div class="log-item success">
+                    <div class="log-time">09:00 - 11:00</div>
+                    <div class="log-details">
+                        <h3>Deep Work Session</h3>
+                        <p>2 hours of uninterrupted focus</p>
+                    </div>
+                    <div class="log-status">Completed</div>
+                </div>
+                <div class="log-item failed">
+                    <div class="log-time">11:30 - 12:00</div>
+                    <div class="log-details">
+                        <h3>Quick Focus</h3>
+                        <p>Session interrupted</p>
+                    </div>
+                    <div class="log-status">Failed</div>
+                </div>
+                <div class="log-item success">
+                    <div class="log-time">01:00 - 02:30</div>
+                    <div class="log-details">
+                        <h3>Project Work</h3>
+                        <p>1.5 hours of focused work</p>
+                    </div>
+                    <div class="log-status">Completed</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Milestone Celebration -->
+        <section class="milestone-section">
+            <div class="milestone-content">
+                <h2>🎉 New Milestone Achieved!</h2>
+                <p>You've completed 50 focus sessions this month</p>
+                <button class="share-btn">Share Achievement</button>
+            </div>
+            <div id="confetti-canvas"></div>
+        </section>
+    </div>
+
+    <script src="js/progress.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
